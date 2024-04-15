@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company Portfolio</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: #221761;
+            color: #fff;
+            padding: 20px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>JTECH</h1>
+        <nav>
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#locations">Locations</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <div class="container">
+            <h2>About Us</h2>
+            <p>We elevate your online presence with fair and pocket friendly prices</p>
+        </div>
+    </section>
+
+    <section id="locations">
+        <div class="container">
+            <h2>Locations</h2>
+            <div id="map"></div>
+        </div>
+    </section>
+
+    <script>
+        // You can integrate Google Maps API here to show your locations on the map
+        // For this example, let's just display a static map image
+
+        // Replace YOUR_API_KEY with your actual Google Maps API key
+        const apiKey = 'YOUR_API_KEY';
+
+        function initMap() {
+            const mapDiv = document.getElementById('map');
+            mapDiv.innerHTML = '<img src="https://maps.googleapis.com/maps/api/staticmap?center=New+York,NY&zoom=12&size=400x400&key=' + apiKey + '" alt="Map">';
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap" async defer></script>
+</body>
+</html>
